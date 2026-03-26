@@ -1,4 +1,4 @@
-# Docker Image Optimization Lab
+# Docker Image Optimization Lab 💻
 
 [1. 실습 방식](#1-실습-방식)
 
@@ -25,7 +25,7 @@
 
 ## 1. 실습 방식
 
-Docker 이미지 최적화의 필요성을 검증하기 위해 의도적으로 Anti-pattern을 적용한 비효율적인 Dockerfile을 먼저 설계합니다.
+Docker 이미지 최적화의 필요성을 검증하기 위해 **Top-down** 방식을 사용해 의도적으로 Anti-pattern을 적용한 비효율적인 Dockerfile을 먼저 설계합니다.
 
 이후 동일한 Python 애플리케이션 [Docker-2-Notion (D2N)](https://github.com/Kumin-91/Docker-2-Notion)을 기준으로 다음 두 가지 환경을 구성합니다.
 
@@ -38,7 +38,7 @@ Docker 이미지 최적화의 필요성을 검증하기 위해 의도적으로 A
 ## 🛠 Tech Stack
 
 | Category | Details |
-|----------|---------|
+|:----------:|:---------:|
 | OS | ![Linux](https://img.shields.io/badge/Linux-6.14.11--5--pve-FCC624?style=for-the-badge&logo=linux&logoColor=black&labelColor=FCC624) |
 | Container Runtime | ![Docker](https://img.shields.io/badge/Docker-29.3.0-2496ED?style=for-the-badge&logo=docker&logoColor=white&labelColor=2496ED) |
 | Build Tool | Dockerfile, PyInstaller |
