@@ -25,9 +25,9 @@
 
 ## 1. 실습 방식
 
-Docker 이미지 최적화의 필요성을 검증하기 위해 의도적으로 Anti-pattern을 적용한 비효율적인 Dockerfile을 먼저 설계합니다
+Docker 이미지 최적화의 필요성을 검증하기 위해 의도적으로 Anti-pattern을 적용한 비효율적인 Dockerfile을 먼저 설계합니다.
 
-이후 동일한 Python 애플리케이션 [Docker-2-Notion (D2N)](https://github.com/Kumin-91/Docker-2-Notion)을 기준으로 다음 두 가지 환경을 구성합니다:
+이후 동일한 Python 애플리케이션 [Docker-2-Notion (D2N)](https://github.com/Kumin-91/Docker-2-Notion)을 기준으로 다음 두 가지 환경을 구성합니다.
 
 * **비효율적인 Dockerfile (Anti-pattern 적용) vs 최적화된 Dockerfile**
 
@@ -85,7 +85,7 @@ Docker 이미지 최적화의 필요성을 검증하기 위해 의도적으로 A
 | **평균 빌드 시간** | 48 초 | 31 초 | 약 35% 감소 |
 | **이미지 크기** | 1,380 MB | 101 MB | 약 93% 감소 |
 
-> **Dockerfile 최적화를 통해 이미지 용량과 빌드 시간이 모두 크게 개선되었으며, 특히 멀티 스테이지 빌드와 캐싱 전략이 성능 향상에 핵심 역할을 담당합니다.**
+> **Dockerfile 최적화를 통해 이미지 용량과 빌드 시간이 모두 크게 개선되었으며, <br> 특히 멀티 스테이지 빌드와 캐싱 전략이 성능 향상에 핵심 역할을 담당합니다.**
 
 <br>
 
