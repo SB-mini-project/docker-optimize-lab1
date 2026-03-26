@@ -1,8 +1,4 @@
-# docker-optimize-lab1
-도커 이미지 최적화 학습 및 정리 레포지토리
-
-<br>
-
+# Docker Image Optimization Lab
 ## 프로젝트 개요
 
 > 이미지 크기와 빌드 시간에 영향을 주는 안티 패턴을 의도적으로 적용해 보고, 최적화된 Dockerfile과의 성능 차이(용량 및 시간)를 정량적으로 비교 분석
@@ -16,7 +12,7 @@
 
 Docker 이미지 최적화의 필요성을 검증하기 위해, 의도적으로 Anti-pattern을 적용한 비효율적인 Dockerfile을 먼저 설계
 
-이후 동일한 Python 애플리케이션(**Docker-2-Notion (D2N))**을 기준으로
+이후 동일한 Python 애플리케이션(Docker-2-Notion (D2N))을 기준으로
 
 1. 비효율적인 Dockerfile (Anti-pattern 적용)
 
