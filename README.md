@@ -12,11 +12,16 @@
 
 [6. Dockerfile 작성 시 적용 원칙](#6-Dockerfile-작성-시-적용-원칙)
 
+<br>
+
+
 ## 📃 프로젝트 개요
 
 이미지 크기와 빌드 시간에 영향을 주는 안티 패턴을 의도적으로 적용해 보고, 최적화된 Dockerfile과의 성능 차이(용량 및 시간)를 정량적으로 비교 분석합니다.
 
 💡 단순한 개선이 아니라 **비효율 → 원인 분석 → 최적화 → 결과 검증**의 흐름을 통해 Docker 레이어 구조와 캐싱 전략이 실제 성능에 미치는 영향을 확인하는 것을 목표로 합니다.
+
+<br>
 
 ## 1. 실습 방식
 
@@ -26,11 +31,25 @@ Docker 이미지 최적화의 필요성을 검증하기 위해 의도적으로 A
 
 * **비효율적인 Dockerfile (Anti-pattern 적용) vs 최적화된 Dockerfile**
 
-그 후 **빌드 시간과 이미지 용량을 반복 측정하여 평균값을 비교**합니다
+그 후 **빌드 시간과 이미지 용량을 반복 측정하여 평균값을 비교**합니다.
+
+<br>
+
+## 🛠 Tech Stack
+
+| Category | Details |
+|----------|---------|
+| OS | ![Linux](https://img.shields.io/badge/Linux-6.14.11--5--pve-FCC624?style=for-the-badge&logo=linux&logoColor=black&labelColor=FCC624) |
+| Container Runtime | ![Docker](https://img.shields.io/badge/Docker-29.3.0-2496ED?style=for-the-badge&logo=docker&logoColor=white&labelColor=2496ED) |
+| Build Tool | Dockerfile, PyInstaller |
+
+<br>
 
 ## 2. 실습 수행 절차
 
 ![실행절차](./images/Docker수행절차.png)
+
+<br>
 
 ## 3. Dockerfile 비교 및 성능 측정 결과
 
@@ -40,17 +59,23 @@ Docker 이미지 최적화의 필요성을 검증하기 위해 의도적으로 A
 | :---: |
 | ![image](./images/code.png) |
 
+<br>
+
 ### 3.2 빌드 시간 측정 및 이미지 용량 비교 결과
 
 | 비효율적 Dockerfile 빌드 시간 측정 vs 최적화된 Dockerfile 빌드 시간 측정 |
 | :---: |
 | ![image](./images/result.png) |
 
+<br>
+
 ### 3.3 이미지 용량 측정 결과
 
 | 비효율적 Dockerfile 이미지 | 최적화된 Dockerfile 이미지 |
 | :---: | :---: |
 | `1,380 MB` | `101 MB` |
+
+<br>
 
 ## 4. 최종 결과 비교 및 개선 효과 분석
 
@@ -62,6 +87,8 @@ Docker 이미지 최적화의 필요성을 검증하기 위해 의도적으로 A
 
 > **Dockerfile 최적화를 통해 이미지 용량과 빌드 시간이 모두 크게 개선되었으며, 특히 멀티 스테이지 빌드와 캐싱 전략이 성능 향상에 핵심 역할을 담당합니다.**
 
+<br>
+
 ## 5. 최적화 필요성
 
 * **비용 및 자원 절감:** 이미지 용량 감소로 스토리지 비용 절감 및 네트워크 전송 시간을 단축합니다.
@@ -69,6 +96,8 @@ Docker 이미지 최적화의 필요성을 검증하기 위해 의도적으로 A
 * **보안 강화:** 멀티 스테이지 빌드를 통해 최종 실행 이미지에서 불필요한 빌드 도구를 제거함으로써 공격 표면을 최소화합니다.
 
 * **개발 생산성 향상:** 효율적인 레이어 캐싱으로 코드 수정 후 빌드 시간을 단축합니다.
+
+<br>
 
 ## 6. Dockerfile 작성 시 적용 원칙
 
