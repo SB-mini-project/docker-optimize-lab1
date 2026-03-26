@@ -47,7 +47,7 @@ Docker 이미지 최적화의 필요성을 검증하기 위해 의도적으로 A
 
 ## 2. 실습 수행 절차
 
-![실행절차](./images/Docker수행절차.png)
+![실행절차](./images/Docker실습절차.png)
 
 <br>
 
